@@ -169,5 +169,5 @@ emp_id          salary              commission
 
 _Answer:_
 ```
-# 
 select emp_id, sum(salary + nvl(commission, 0)) from EMPLOYEE;
+```
