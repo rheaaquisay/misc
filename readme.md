@@ -154,3 +154,5 @@ from test_a a
 left join test_b b on a.id = b.id
 where b.id is null;
 ```        
+
+> __[Question# 2]__ :Write a query to display the total salary of an employee given the following:
