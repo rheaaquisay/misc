@@ -153,6 +153,21 @@ select a.id
 from test_a a
 left join test_b b on a.id = b.id
 where b.id is null;
-```        
+```       
 
 > __[Question# 2]__ :Write a query to display the total salary of an employee given the following:
+```
+EMPLOYEE table
+emp_id          salary              commission
+-------         ------------        -------------
+1               5000                500
+2               4500                500
+3               7000                null
+4               5000                null
+5               10000               700
+```
+
+_Answer:_
+```
+# 
+select emp_id, sum(salary + nvl(commission, 0)) from EMPLOYEE;
